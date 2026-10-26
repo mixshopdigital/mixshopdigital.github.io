@@ -231,6 +231,7 @@ p{margin:0 0 1em}
 .nota{text-align:center;color:var(--suave);margin:26px auto 0;max-width:760px;font-size:.95rem}
 .descarga{display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center;justify-content:space-between;background:#fff;border-radius:22px;padding:24px 28px;box-shadow:inset 0 0 0 2px var(--linea)}
 .descarga p{margin:0;color:var(--suave)}
+.descarga>div{flex:1 1 380px}.descarga p.small{margin-top:8px;font-size:.9rem}
 .relacionados .grilla{grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
 .pronto{display:inline-flex;align-items:center;gap:6px;background:#F2E8FD;color:var(--violeta);font-weight:700;font-size:.85rem;padding:6px 12px;border-radius:999px;margin-bottom:12px}
 
