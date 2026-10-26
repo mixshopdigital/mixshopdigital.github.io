@@ -1,0 +1,2 @@
+Acá el generador de licencias publica las renovaciones (un archivo .txt por cliente).
+No borres ni edites esta carpeta a mano.
