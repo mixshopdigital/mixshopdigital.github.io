@@ -244,3 +244,4 @@ p{margin:0 0 1em}
 
 /* Texto sobre blanco con el color de cada producto: siempre oscurecido para que se lea bien */
 .tarjeta,.prod-portada,.seccion{--ct:color-mix(in srgb,var(--c,#0A52C4) 62%,#0F1E4A)}
+.paso-img{display:block;width:100%;height:auto;margin:12px 0 2px;border-radius:12px;box-shadow:0 8px 24px -12px rgba(15,30,74,.35),0 0 0 1px var(--linea)}.aviso-pc{max-width:760px;margin:0 0 18px;padding:14px 18px;border-radius:14px;background:#fff7e6;box-shadow:inset 0 0 0 1px #f5d08a;color:#5c3b00}
