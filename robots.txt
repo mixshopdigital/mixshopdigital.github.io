@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /renovaciones/
-Sitemap: https://mixshopdigital.github.io/sitemap.xml
+Sitemap: https://mixshopdigital.com.py/sitemap.xml
