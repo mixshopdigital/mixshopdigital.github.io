@@ -19,3 +19,15 @@
     });
   });
 })();
+
+/* Video de YouTube: se carga solo al tocar (más rápido y más privado) */
+document.addEventListener('click', function (e) {
+  var b = e.target.closest && e.target.closest('.video-play');
+  if (!b) return;
+  var f = document.createElement('iframe');
+  f.src = 'https://www.youtube-nocookie.com/embed/' + b.getAttribute('data-yt') + '?autoplay=1&rel=0';
+  f.title = b.getAttribute('aria-label') || 'Video';
+  f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+  f.setAttribute('allowfullscreen', '');
+  b.parentNode.replaceChild(f, b);
+});

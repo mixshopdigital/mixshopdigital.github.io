@@ -245,3 +245,13 @@ p{margin:0 0 1em}
 /* Texto sobre blanco con el color de cada producto: siempre oscurecido para que se lea bien */
 .tarjeta,.prod-portada,.seccion{--ct:color-mix(in srgb,var(--c,#0A52C4) 62%,#0F1E4A)}
 .paso-img{display:block;width:100%;height:auto;margin:12px 0 2px;border-radius:12px;box-shadow:0 8px 24px -12px rgba(15,30,74,.35),0 0 0 1px var(--linea)}.aviso-pc{max-width:760px;margin:0 0 18px;padding:14px 18px;border-radius:14px;background:#fff7e6;box-shadow:inset 0 0 0 1px #f5d08a;color:#5c3b00}
+
+/* Video de presentación (YouTube, se carga al tocar) */
+.video-caja{max-width:860px;margin:0 auto;border-radius:18px;overflow:hidden;background:#0B2A7A;box-shadow:0 2px 6px rgba(15,30,74,.08),0 40px 70px -30px rgba(15,30,74,.45);aspect-ratio:16/9;position:relative}
+.video-caja iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-play{all:unset;cursor:pointer;display:block;width:100%;height:100%;position:relative}
+.video-play img{width:100%;height:100%;object-fit:cover;display:block}
+.video-btn{position:absolute;left:50%;top:50%;width:86px;height:86px;margin:-43px 0 0 -43px;border-radius:50%;background:var(--naranja);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 34px rgba(0,0,0,.4);transition:transform .15s}
+.video-btn svg{width:34px;height:34px;margin-left:4px}
+.video-play:hover .video-btn,.video-play:focus-visible .video-btn{transform:scale(1.08)}
+.video-play:focus-visible{outline:3px solid var(--azul-vivo);outline-offset:-3px}
