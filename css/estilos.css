@@ -265,7 +265,7 @@ p{margin:0 0 1em}
 .mat{--c:var(--azul);--c2:var(--azul-vivo);display:flex;flex-direction:column;background:#fff;border-radius:var(--radio);box-shadow:var(--sombra);overflow:hidden;transition:transform .2s,box-shadow .2s}
 .mat:hover{transform:translateY(-4px);box-shadow:0 2px 4px rgba(15,30,74,.06),0 22px 40px -16px rgba(15,30,74,.3)}
 .mat-top{position:relative;display:flex;align-items:center;gap:14px;padding:22px 24px;background:linear-gradient(135deg,var(--c),var(--c2));color:#fff}
-.mat-ico{width:46px;height:46px;flex:none;padding:9px;border-radius:14px;background:rgba(255,255,255,.18)}
+.mat-ico{width:54px;height:54px;flex:none;padding:11px;border-radius:16px;background:#fff;color:var(--c);box-shadow:0 6px 16px rgba(0,0,0,.22)}
 .mat-rubro{font:700 .82rem/1.2 var(--txt);letter-spacing:.07em;text-transform:uppercase;opacity:.95}
 .mat-gratis{margin-left:auto;font:700 .75rem/1 var(--txt);letter-spacing:.06em;text-transform:uppercase;background:#fff;color:var(--c);padding:6px 11px;border-radius:999px}
 .mat-cuerpo{display:flex;flex-direction:column;flex:1;padding:22px 24px 24px}
