@@ -119,6 +119,6 @@ Definido en `src/lib/db.ts`. Cada tabla se traslada 1 a 1 a PostgreSQL en la fas
 
 Por eso el centro de **Recordatorios** dentro de la app es la fuente principal, y cada cita se puede agregar al calendario del celular.
 
-## 9. Modelo de negocio preparado
+## 9. Modelo de venta
 
-La estructura permite agregar después: plan gratuito familiar, plan premium (más almacenamiento, más integrantes, copias en la nube, informes adicionales). Sin publicidad invasiva y **sin comercializar datos de salud**. Sin precios dentro de la app: las consultas van por WhatsApp 0994 638 426.
+Familia Sana se vende con **pago único**: una sola compra, sin licencias, suscripciones ni vencimientos. La app no tiene planes ni bloqueos por pago. Sin publicidad y **sin comercializar datos de salud**. Sin precios dentro de la app: las consultas van por WhatsApp 0994 638 426.
