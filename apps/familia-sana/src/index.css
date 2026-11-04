@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { -webkit-tap-highlight-color: transparent; }
+body { @apply bg-crema-100 font-sans text-piedra-800 antialiased; }
+html.mayor { font-size: 19px; }
+html.mayor .ocultar-mayor { display: none !important; }
+:focus-visible { outline: 3px solid #3FB8B0; outline-offset: 2px; border-radius: 12px; }
+
+@keyframes subir { from { transform: translateY(24px); opacity: 0 } to { transform: none; opacity: 1 } }
+@keyframes aparecer { from { opacity: 0; transform: translateY(6px) } to { opacity: 1; transform: none } }
+.sheet-in { animation: subir .22s ease-out; }
+.toast-in { animation: aparecer .2s ease-out; }
+.entrar > * { animation: aparecer .3s ease-out both; }
+.entrar > *:nth-child(2) { animation-delay: .04s } .entrar > *:nth-child(3) { animation-delay: .08s }
+.entrar > *:nth-child(4) { animation-delay: .12s } .entrar > *:nth-child(5) { animation-delay: .16s }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+.sin-barra::-webkit-scrollbar { display: none } .sin-barra { scrollbar-width: none }
+
+@media print {
+  body { background: #fff; }
+  .no-imprimir { display: none !important; }
+  .solo-imprimir { display: block !important; }
+  main { padding: 0 !important; max-width: none !important; }
+}
+.solo-imprimir { display: none; }

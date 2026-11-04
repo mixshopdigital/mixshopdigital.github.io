@@ -1,0 +1,16 @@
+export const SECCIONES = [
+  { r: 'inicio', t: 'Inicio', i: 'inicio', c: 'bg-salvia-100 text-salvia-700' },
+  { r: 'familia', t: 'Mi familia', i: 'familia', c: 'bg-salvia-100 text-salvia-700' },
+  { r: 'historia', t: 'Historia clínica', i: 'historia', c: 'bg-cielo-100 text-cielo-600' },
+  { r: 'documentos', t: 'Análisis y documentos', i: 'informe', c: 'bg-cielo-100 text-cielo-600' },
+  { r: 'medicamentos', t: 'Medicamentos', i: 'pastilla', c: 'bg-turquesa-100 text-turquesa-700' },
+  { r: 'agenda', t: 'Agenda', i: 'agenda', c: 'bg-turquesa-100 text-turquesa-700' },
+  { r: 'prevencion', t: 'Prevención', i: 'escudo', c: 'bg-salvia-100 text-salvia-700' },
+  { r: 'femenina', t: 'Salud femenina', i: 'flor', c: 'bg-lavanda-100 text-lavanda-600' },
+  { r: 'vacunas', t: 'Vacunación', i: 'vacuna', c: 'bg-turquesa-100 text-turquesa-700' },
+  { r: 'mascotas', t: 'Mascotas', i: 'mascota', c: 'bg-amber-100 text-amber-800' },
+  { r: 'consulta', t: 'Tengo una consulta', i: 'chat', c: 'bg-coral-100 text-coral-600' },
+  { r: 'avisos', t: 'Recordatorios', i: 'campana', c: 'bg-coral-100 text-coral-600' },
+  { r: 'informes', t: 'Informes', i: 'imprimir', c: 'bg-cielo-100 text-cielo-600' },
+  { r: 'ajustes', t: 'Configuración', i: 'ajustes', c: 'bg-crema-200 text-piedra-700' },
+]
