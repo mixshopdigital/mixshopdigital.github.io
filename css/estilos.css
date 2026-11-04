@@ -422,3 +422,9 @@ p{margin:0 0 1em}
 @media (max-width:640px){.mi-titulo h1{font-size:clamp(2.4rem,13vw,3.4rem)}}
 
 .pie .redes{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.pie .redes a{border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 14px;font-size:.88rem}.pie .redes a:hover{background:rgba(255,255,255,.12);text-decoration:none}
+.pie .redes a{border:0;color:#fff;font-weight:600;padding:7px 16px}.pie .redes a:hover{filter:brightness(1.12);background-clip:border-box}
+.pie .redes a.ig{background:linear-gradient(45deg,#f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)}
+.pie .redes a.tt{background:#000;box-shadow:inset 2px 0 0 #25f4ee,inset -2px 0 0 #fe2c55}
+.pie .redes a.yt{background:#ff0000}
+.pie .redes a.fb{background:#1877f2}
+.pie .redes a.pi{background:#e60023}
