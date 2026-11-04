@@ -420,3 +420,5 @@ p{margin:0 0 1em}
 .mi-amigos img{width:clamp(40px,8vw,92px)}
 @media (min-width:960px){.mi-carpetas{grid-template-columns:repeat(6,1fr)}.mi-carpeta{grid-column:span 2}.mi-carpeta:nth-child(n+4){grid-column:span 3}}
 @media (max-width:640px){.mi-titulo h1{font-size:clamp(2.4rem,13vw,3.4rem)}}
+
+.pie .redes{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.pie .redes a{border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 14px;font-size:.88rem}.pie .redes a:hover{background:rgba(255,255,255,.12);text-decoration:none}
