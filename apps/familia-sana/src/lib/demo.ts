@@ -1,11 +1,32 @@
-import { db, ahora, registrarActividad, setAjuste } from './db'
+import { db, ahora, getAjuste, registrarActividad, setAjuste } from './db'
 import { ESQUEMA_INICIAL, RECOMENDACIONES_INICIALES } from './fuentes'
 import { hoyISO, sumarDias, sumarMeses } from './salud'
 
 /** Carga el catálogo de fuentes sanitarias si la base está vacía. */
+/** Versión del catálogo incluido en la app. Subirla cuando cambie fuentes.ts. */
+export const VERSION_CATALOGO = 2
+
+/**
+ * Carga el catálogo de fuentes sanitarias si la base está vacía, o lo actualiza
+ * cuando la app trae una versión nueva. Se actualiza por código: los registros de
+ * la familia (vacunas aplicadas, controles, fechas indicadas por el médico) no se tocan
+ * y las vacunas que la persona agregó a mano se conservan.
+ */
 export async function asegurarCatalogos() {
-  if ((await db.esquemaVacunas.count()) === 0) await db.esquemaVacunas.bulkAdd(ESQUEMA_INICIAL)
-  if ((await db.recomendaciones.count()) === 0) await db.recomendaciones.bulkAdd(RECOMENDACIONES_INICIALES)
+  const version = await getAjuste<number>('catalogoVersion', 0)
+  if (version >= VERSION_CATALOGO && (await db.esquemaVacunas.count()) > 0) return
+  await db.transaction('rw', db.esquemaVacunas, db.recomendaciones, async () => {
+    for (const e of ESQUEMA_INICIAL) {
+      const previa = await db.esquemaVacunas.where('codigo').equals(e.codigo).first()
+      await db.esquemaVacunas.put(previa ? { ...e, id: previa.id } : e)
+    }
+    for (const r of RECOMENDACIONES_INICIALES) {
+      const previa = await db.recomendaciones.where('codigo').equals(r.codigo).first()
+      await db.recomendaciones.put(previa ? { ...r, id: previa.id } : r)
+    }
+  })
+  if (version > 0) await registrarActividad('Fuentes sanitarias actualizadas', `Catálogo versión ${VERSION_CATALOGO}`)
+  await setAjuste('catalogoVersion', VERSION_CATALOGO)
 }
 
 const T = hoyISO
@@ -91,7 +112,7 @@ export async function cargarDemo() {
 
   // Vacunas registradas (ejemplo): Mateo con el esquema hasta los 12 meses
   const nac = (await db.integrantes.get(nene))!.fechaNacimiento!
-  const codigos = ['bcg', 'hepb-rn', 'rota-1', 'hexa-1', 'pcv13-1', 'rota-2', 'hexa-2', 'pcv13-2', 'hexa-3', 'flu-6m', 'pcv13-r', 'spr-1', 'aa']
+  const codigos = ['bcg', 'hepb-rn', 'rota-1', 'hexa-1', 'pcv13-1', 'rota-2', 'hexa-2', 'pcv13-2', 'hexa-3', 'flu-6m', 'pcv13-r', 'flu-12m', 'spr-1', 'aa']
   const esquema = await db.esquemaVacunas.where('codigo').anyOf(codigos).toArray()
   await db.vacunas.bulkAdd(esquema.map((e) => ({ integranteId: nene, esquemaCodigo: e.codigo, nombre: e.nombre, dosis: e.dosis, fechaAplicada: sumarDias(sumarMeses(nac, e.edadMeses ?? 0), 3), lugar: 'Vacunatorio de ejemplo', confirmada: true, demo: true, creado: c })))
   await db.vacunas.bulkAdd([

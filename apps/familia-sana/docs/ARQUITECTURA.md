@@ -8,7 +8,7 @@
 |---|---|---|
 | Sitio de la marca | `mixshopdigital.github.io` es un sitio estático en GitHub Pages (HTML, CSS, JS). No tiene servidor ni base de datos. | La app vive **separada** del sitio. Se puede publicar como subcarpeta (`/familia-sana/`) o en un subdominio, sin tocar el resto del sitio. |
 | Servidor y base de datos en la nube | No hay cuenta de Supabase u otro backend todavía. | **Fase 1 (esta entrega): todo se guarda en el dispositivo** (IndexedDB). **Fase 2:** sincronización con Supabase (PostgreSQL + Auth + Storage privado). |
-| Fuentes oficiales | Durante el desarrollo, la red del entorno bloqueó `pai.mspbs.gov.py`, `dgvs.mspbs.gov.py` y `www.mspbs.gov.py`. | El calendario y las recomendaciones se cargaron como **“Requiere verificación”** con su fuente y enlace. Se verifican desde *Configuración › Fuentes sanitarias* sin tocar los registros de la familia. |
+| Fuentes oficiales | Verificadas el 4/11/2026 contra el PAI (Esquema Regular 2026, actualizado el 2/9/2026, y Adenda VPH 2026), la DGVS y el MSPBS. | De 0 a 14 años, mamografía y próstata: **verificados**. Adultos, embarazadas y grupos de riesgo: el PAI solo publica la tabla 2021, por eso siguen como **“Requiere verificación”**. Detalle en `LISTA-VERIFICADA.md`. |
 
 ## 2. Tecnologías elegidas (y por qué)
 
@@ -81,6 +81,7 @@ Definido en `src/lib/db.ts`. Cada tabla se traslada 1 a 1 a PostgreSQL en la fas
 - **Resultados de laboratorio:** se guardan y grafican con la referencia que informó el laboratorio. La app no interpreta.
 - **Ciclo menstrual:** estimaciones con el promedio de los últimos ciclos registrados, desactivables, con aviso de que **no es método anticonceptivo**.
 - **Medicamentos:** los recordatorios salen de la prescripción cargada. La app nunca cambia dosis ni horarios.
+- **Actualización del catálogo:** `VERSION_CATALOGO` en `src/lib/demo.ts`. Al subirla, cada dispositivo actualiza las vacunas y recomendaciones por código al abrir la app, sin tocar los registros de la familia y conservando lo agregado a mano.
 - **Cambio de recomendaciones:** al editar una recomendación sube su versión; las fechas indicadas por un médico y los registros históricos no se modifican.
 
 ## 6. Seguridad y privacidad (fase 1)
