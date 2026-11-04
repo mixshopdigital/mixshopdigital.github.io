@@ -8,6 +8,8 @@ import { Firma, Hoja, ir, Logo, numeroNavegacion, useRuta } from './ui/kit'
 import { Icono } from './ui/iconos'
 import { SECCIONES } from './ui/secciones'
 import Bienvenida from './screens/Bienvenida'
+import Activacion from './screens/Activacion'
+import { estaActivada } from './lib/activacion'
 import Bloqueo from './screens/Bloqueo'
 import Inicio from './screens/Inicio'
 import { ListaFamilia, Perfil } from './screens/Familia'
@@ -35,12 +37,14 @@ export default function App() {
   const [listo, setListo] = useState(false)
   const [bloqueada, setBloqueada] = useState(false)
   const [menu, setMenu] = useState(false)
+  const [activada, setActivada] = useState<boolean>()
   const bienvenida = useLiveQuery(() => getAjuste('bienvenida', false), [], undefined)
   const mayor = useLiveQuery(() => getAjuste('modoMayor', false), [], false)
   const cantAvisos = useLiveQuery(async () => (await calcularAvisos()).filter((a) => a.urgencia !== 'baja').length, [ruta.join('/')], 0)
 
   useEffect(() => {
     ;(async () => {
+      setActivada(await estaActivada())
       await asegurarCatalogos()
       if (await pinApp()) setBloqueada(true)
       setListo(true)
@@ -64,7 +68,8 @@ export default function App() {
     return () => document.removeEventListener('visibilitychange', f)
   }, [])
 
-  if (!listo || bienvenida === undefined) return <PantallaCarga />
+  if (!listo || bienvenida === undefined || activada === undefined) return <PantallaCarga />
+  if (!activada) return <Activacion onActivar={() => setActivada(true)} />
   if (!bienvenida) return <Bienvenida />
   if (bloqueada) return <Bloqueo onAbrir={() => setBloqueada(false)} />
 

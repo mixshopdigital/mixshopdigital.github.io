@@ -1,3 +1,4 @@
+import { guardarActivacion, leerActivacion } from './activacion'
 import { db, registrarActividad, setAjuste } from './db'
 
 /** Copia de seguridad completa en un archivo JSON (los archivos adjuntos van en base64). */
@@ -39,8 +40,11 @@ export async function importarRespaldo(archivo: File) {
 }
 
 export async function borrarTodo() {
+  const activacion = leerActivacion()
   await db.delete()
   try { localStorage.clear(); sessionStorage.clear() } catch { /* nada */ }
+  // la activación es de la compra, no de los datos: se conserva
+  if (activacion) guardarActivacion(activacion)
   location.hash = ''
   location.reload()
 }

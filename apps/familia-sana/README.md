@@ -19,6 +19,10 @@ npm run build      # genera la carpeta dist/ lista para publicar
 npm run preview    # prueba la versión compilada
 ```
 
+## Código de activación
+
+Antes de compilar para vender, crear `.env.local` con `VITE_ACTIVACION_SAL=<clave privada>`. Sin ese archivo la app usa una clave de desarrollo y los códigos reales no sirven.
+
 ## Publicar
 
 `dist/` son archivos estáticos con rutas relativas: se puede copiar a cualquier hosting con HTTPS.

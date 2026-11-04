@@ -1,3 +1,4 @@
+import { leerActivacion } from '../lib/activacion'
 import { useState } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
 import { db, getAjuste, registrarActividad, setAjuste, type Recomendacion, type VacunaEsquema } from '../lib/db'
@@ -225,6 +226,7 @@ function Acerca() {
           <h2 className="mt-3 font-display text-3xl text-salvia-700">Familia Sana</h2>
           <p className="text-piedra-600">Tu familia, su salud, todo en un solo lugar</p>
           <p className="mt-1 text-xs text-piedra-500">Versión 1.0 · Datos guardados en este dispositivo</p>
+          {leerActivacion() && <p className="mt-2 rounded-full bg-salvia-100 px-3 py-1 text-xs font-bold text-salvia-800">Compra única activada · {leerActivacion()!.codigo}</p>}
         </div>
         <Tarjeta className="mt-6 text-center">
           <p className="text-xs uppercase tracking-widest text-piedra-500">Una solución digital de</p>
