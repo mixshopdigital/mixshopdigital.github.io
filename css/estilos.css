@@ -527,27 +527,22 @@ p{margin:0 0 1em}
  .herr-grid{grid-template-columns:1fr}
 }
 
-/* Familia Sana: app para el hogar, con estilo propio (salvia, turquesa y crema) */
-.fs{padding-block:clamp(40px,6vw,72px);background:linear-gradient(180deg,#FBF8F3 0,#EEF5F0 100%)}
-.fs-caja{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,4vw,56px);align-items:center;background:#FFFDF9;border:1px solid #DCE9E1;border-radius:40px;padding:clamp(24px,4vw,56px);box-shadow:0 30px 60px -40px rgba(62,104,82,.55)}
-.fs-etiqueta{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.9rem;letter-spacing:.02em;color:#3E6852;background:#E3EFE7;padding:7px 14px;border-radius:999px}
-.fs-etiqueta .ico{width:18px;height:18px;color:#2A9D8F}
-.fs h2{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(2.2rem,5vw,3.4rem);line-height:1.02;margin:16px 0 6px;color:#3E6852;letter-spacing:-.01em}
-.fs-lema{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.1rem,2.2vw,1.35rem);color:#2A9D8F;margin:0 0 14px}
-.fs-txt p{color:#4A5A52;max-width:54ch;font-size:1.05rem}
-.fs-chips{list-style:none;padding:0;margin:18px 0 0;display:flex;flex-wrap:wrap;gap:8px}
-.fs-chips li{background:#fff;border:1.5px solid #CFE3D6;color:#3E6852;font-weight:600;padding:6px 14px;border-radius:999px;font-size:.92rem}
-.fs-chips li:nth-child(2){border-color:#BFE6E1;color:#1F7A70}.fs-chips li:nth-child(3){border-color:#DCD3F0;color:#5E4E8C}.fs-chips li:nth-child(4){border-color:#F3D3C8;color:#A4513A}.fs-chips li:nth-child(5){border-color:#CFE0F2;color:#3B6390}
-.fs-txt .fs-nota{font-size:.95rem;color:#6B7A72;margin-top:16px}
-.fs-acc{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
-.fs-btn{display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:1.05rem;color:#fff;background:#3E8E7E;padding:14px 26px;border-radius:18px;text-decoration:none;box-shadow:0 14px 24px -16px rgba(42,110,96,.9);transition:background .2s,transform .2s}
-.fs-btn:hover{background:#2F7466;transform:translateY(-2px)}
-.fs-btn2{display:inline-flex;align-items:center;justify-content:center;font-weight:700;color:#3E6852;background:transparent;border:2px solid #A9CBB6;padding:12px 22px;border-radius:18px;text-decoration:none}
+/* Familia Sana: app para el hogar, tarjeta con estilo propio (salvia, turquesa y crema) */
+.fs{padding-block:clamp(28px,4vw,48px);background:linear-gradient(180deg,#FBF8F3 0,#EEF5F0 100%)}
+.fs-tarjeta{display:grid;grid-template-columns:180px 1fr;gap:clamp(18px,3vw,32px);align-items:center;max-width:780px;margin-inline:auto;background:#FFFDF9;border:1px solid #DCE9E1;border-radius:28px;padding:clamp(18px,3vw,28px);box-shadow:0 24px 50px -36px rgba(62,104,82,.6)}
+.fs-foto{background:linear-gradient(160deg,#6E9E84,#2A9D8F);border-radius:20px;padding:16px 16px 0;height:230px;overflow:hidden}
+.fs-foto img{display:block;width:100%;height:auto;border:5px solid #2F3B35;border-bottom:0;border-radius:18px 18px 0 0}
+.fs-etiqueta{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:.82rem;color:#3E6852;background:#E3EFE7;padding:5px 12px;border-radius:999px}
+.fs-etiqueta .ico{width:16px;height:16px;color:#2A9D8F}
+.fs h2{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(1.7rem,3.4vw,2.2rem);line-height:1.05;margin:10px 0 2px;color:#3E6852}
+.fs-lema{font-family:'Fraunces',Georgia,serif;font-size:1.05rem;color:#2A9D8F;margin:0 0 8px}
+.fs-cuerpo p{color:#4A5A52;font-size:.98rem;margin:0}
+.fs-cuerpo .fs-lema{color:#2A9D8F}
+.fs-acc{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.fs-btn{display:inline-flex;align-items:center;justify-content:center;font-weight:700;color:#fff;background:#3E8E7E;padding:11px 22px;border-radius:14px;text-decoration:none;transition:background .2s}
+.fs-btn:hover{background:#2F7466}
+.fs-btn2{display:inline-flex;align-items:center;justify-content:center;font-weight:700;color:#3E6852;border:2px solid #A9CBB6;padding:9px 18px;border-radius:14px;text-decoration:none}
 .fs-btn2:hover{background:#E3EFE7}
 .fs-btn:focus-visible,.fs-btn2:focus-visible{outline:3px solid #2A9D8F;outline-offset:3px}
-.fs-telefonos{position:relative;min-height:540px}
-.fs-tel{position:absolute;width:52%;height:auto;border:8px solid #2F3B35;border-radius:30px;background:#2F3B35;box-shadow:0 28px 40px -24px rgba(30,50,40,.6)}
-.fs-tel.a{left:4%;top:0;transform:rotate(-4deg)}
-.fs-tel.b{right:2%;top:12%;transform:rotate(4deg)}
-@media (max-width:820px){.fs-caja{grid-template-columns:1fr;border-radius:28px}.fs-telefonos{min-height:0;height:min(92vw,420px);order:-1}.fs-tel{width:46%}.fs-btn,.fs-btn2{width:100%}}
+@media (max-width:600px){.fs-tarjeta{grid-template-columns:1fr}.fs-foto{height:180px;padding-inline:22%}.fs-btn,.fs-btn2{width:100%}}
 @media (prefers-reduced-motion:reduce){.fs-btn{transition:none}}
