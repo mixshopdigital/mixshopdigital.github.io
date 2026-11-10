@@ -647,3 +647,29 @@ p{margin:0 0 1em}
  .ni-card:nth-child(even):hover{transform:rotate(.8deg);box-shadow:none}
  .compartir a:hover{transform:none}
 }
+
+/* ===== Calculadoras nuevas (nov 2026) ===== */
+.herr input[type=date]{width:100%;font:inherit;font-size:1.05rem;padding:11px 14px;border:0;border-radius:12px;background:var(--fondo-2);box-shadow:inset 0 0 0 1.5px var(--linea);color:var(--tinta);min-height:48px;-webkit-appearance:none;appearance:none}
+.herr input[type=date]:focus{outline:3px solid var(--azul-vivo);outline-offset:1px;background:#fff}
+.herr-campos.dos{grid-template-columns:1fr 1fr;align-items:end}
+.herr-modo.tres{grid-template-columns:repeat(3,1fr)}
+.herr-aviso{margin:16px 0 0;padding:13px 16px;border-radius:14px;background:#FFF4D6;color:#5A4300;font-size:.93rem;line-height:1.45}
+.herr-aviso[hidden],.herr-detalle[hidden],.herr-tabla tr[hidden]{display:none}
+.herr-tabla th small{display:block;font-weight:400;font-size:.8rem;opacity:.8}
+.herr-sub{margin:28px 0 14px;font-size:1.25rem}
+.herr-detalle{margin-top:16px;border-radius:14px;box-shadow:inset 0 0 0 1.5px var(--linea);padding:4px 16px}
+.herr-detalle summary{cursor:pointer;font-weight:700;color:var(--azul);padding:11px 0}
+.herr-scroll{overflow-x:auto;margin-bottom:12px}
+.herr-plan{width:100%;border-collapse:collapse;font-size:.92rem;font-variant-numeric:tabular-nums}
+.herr-plan th,.herr-plan td{padding:8px 10px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--linea)}
+.herr-plan thead th{font-size:.78rem;letter-spacing:.05em;text-transform:uppercase;color:var(--suave)}
+.herr-plan th:first-child,.herr-plan td:first-child{text-align:left}
+.sm-tabla{font-size:1rem}
+.sm-tabla tbody th{font-weight:500;color:var(--texto);white-space:normal}
+.sm-tabla tbody td{font-weight:700;color:var(--tinta)}
+.sm-tabla tbody tr:first-child td,.sm-tabla tbody tr:first-child th{font-size:1.15rem;font-weight:700;color:var(--azul)}
+.herr-otras{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:10px}
+.herr-otras a{display:inline-block;padding:10px 16px;border-radius:999px;background:#fff;box-shadow:inset 0 0 0 2px var(--linea);color:var(--tinta);font-weight:600;text-decoration:none}
+.herr-otras a:hover{box-shadow:inset 0 0 0 2px var(--azul-vivo);color:var(--azul)}
+@media (max-width:700px){.herr-campos.dos,.herr-modo.tres{grid-template-columns:1fr}}
+.herr-tabla td{white-space:nowrap;padding-left:12px}
