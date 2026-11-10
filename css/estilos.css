@@ -619,3 +619,31 @@ p{margin:0 0 1em}
 @media (max-width:820px){.fs-pag{grid-template-columns:1fr}.fs-pag-foto{width:min(230px,62%)}}
 .fs-enlace{display:inline-block;margin-top:8px;padding:8px 0;font-weight:700;color:#3E6852}
 @media (prefers-reduced-motion:reduce){.compartir a{transition:none}}
+
+/* ===== Ajustes 10 nov 2026 (2): Familia Sana en el catálogo, botón de calculadoras, toque en celulares ===== */
+.menu a.menu-calc{border-color:transparent;background:#FFD60A;color:#0F1E4A;font-weight:700;box-shadow:0 6px 14px -8px rgba(227,167,0,.9)}
+.menu a.menu-calc:hover,.menu a.menu-calc[aria-current=page]{background:#FFC400;color:#0F1E4A;border-color:transparent}
+.menu-calc .mc-c{display:none}
+.encabezado .envoltura{max-width:1420px}
+@media (max-width:1439px) and (min-width:1101px){.menu-calc .mc-l{display:none}.menu-calc .mc-c{display:inline}}
+@media (max-width:1279px) and (min-width:1101px){.menu{gap:6px}.menu a{padding:7px 11px;font-size:.9rem}}
+/* Captura de celular dentro de una tarjeta */
+.tarjeta .foto.foto-cel img{left:29%;top:11%;width:42%;border-radius:16px 16px 0 0}
+/* "¿Tu rubro no está?" cierra el catálogo a todo el ancho */
+.grilla>.tarjeta.medida{grid-column:1/-1}
+@media (min-width:760px){
+ .grilla>.tarjeta.medida{display:grid;grid-template-columns:1fr auto;column-gap:32px;align-items:center;padding:30px 36px}
+ .grilla>.tarjeta.medida h3{grid-column:1;margin-bottom:.25em}
+ .grilla>.tarjeta.medida p{grid-column:1;margin:0;max-width:720px}
+ .grilla>.tarjeta.medida .btn{grid-column:2;grid-row:1/span 2}
+}
+@media (max-width:640px){.grilla>a.tarjeta .foto.foto-cel img{left:14px;top:14px;width:72px;border-radius:10px 10px 0 0}}
+/* En pantallas táctiles no hay efecto al pasar el dedo: el toque abre la tarjeta de una */
+.tarjeta{touch-action:manipulation}
+@media (hover:none){
+ .tarjeta:hover,.mat:hover{transform:none;box-shadow:var(--sombra)}
+ .tarjeta:hover .foto img,.tarjeta:hover .ver .ico{transform:none}
+ .ni-card:nth-child(odd):hover{transform:rotate(-.8deg);box-shadow:none}
+ .ni-card:nth-child(even):hover{transform:rotate(.8deg);box-shadow:none}
+ .compartir a:hover{transform:none}
+}

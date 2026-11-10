@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Fredoka:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/estilos.css?v=20261110">
+<link rel="stylesheet" href="css/estilos.css?v=20261110b">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Mix Shop Digital", "url": "https://mixshopdigital.com.py/", "logo": "https://mixshopdigital.com.py/img/logo-mixshop-digital.png", "slogan": "Herramientas inteligentes que simplifican tu vida.", "areaServed": "PY", "sameAs": ["https://www.instagram.com/mixshop_digital/", "https://www.tiktok.com/@mix.shop.digital", "https://www.youtube.com/@MixShopDigitalPy", "https://www.facebook.com/profile.php?id=61595756501799", "https://www.pinterest.com/mixshopdigital/"], "contactPoint": {"@type": "ContactPoint", "telephone": "+595994638426", "contactType": "sales", "availableLanguage": "es"}}</script>
 <script data-goatcounter="https://mixshopdigital.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Mix Shop Digital", "alternateName": "MixShop Digital", "url": "https://mixshopdigital.com.py/", "inLanguage": "es-PY"}</script>
 </head>
@@ -44,7 +44,7 @@
    <a href="#como-trabajamos">Cómo trabajamos</a>
    <a href="instalacion/">Instalación</a>
    <a href="gratis/">Materiales gratis</a>
-   <a href="herramientas/">🧮 Calculadoras</a>
+   <a class="menu-calc" href="herramientas/">🧮 <span class="mc-l">Calculá tu aguinaldo e IVA gratis</span><span class="mc-c" aria-hidden="true">Aguinaldo e IVA gratis</span></a>
    <a class="menu-ninos" href="gratis/ninos/">🎨 Para niños</a>
    <a href="#preguntas">Preguntas</a>
   </nav>
@@ -67,7 +67,7 @@
 <section class="seccion alt" id="soluciones">
  <div class="envoltura">
   <div class="cabecera"><div class="antetitulo">Nuestras soluciones</div><h2>Elegí la herramienta para tu trabajo</h2><p class="bajada">Cada una está pensada para un rubro de Paraguay. Tocá la que te interesa para ver qué hace y sus planes.</p></div>
-  <div class="rubros" role="group" aria-label="Filtrar por rubro"><button class="rubro" data-rubro="todos" aria-pressed="true">Todas</button><button class="rubro" data-rubro="salud" aria-pressed="false">Salud</button><button class="rubro" data-rubro="contabilidad" aria-pressed="false">Contabilidad</button><button class="rubro" data-rubro="educacion" aria-pressed="false">Educación</button><button class="rubro" data-rubro="comercio" aria-pressed="false">Comercios</button><button class="rubro" data-rubro="barberias" aria-pressed="false">Barberías</button><button class="rubro" data-rubro="veterinarias" aria-pressed="false">Veterinarias</button></div>
+  <div class="rubros" role="group" aria-label="Filtrar por rubro"><button class="rubro" data-rubro="todos" aria-pressed="true">Todas</button><button class="rubro" data-rubro="salud" aria-pressed="false">Salud</button><button class="rubro" data-rubro="contabilidad" aria-pressed="false">Contabilidad</button><button class="rubro" data-rubro="educacion" aria-pressed="false">Educación</button><button class="rubro" data-rubro="comercio" aria-pressed="false">Comercios</button><button class="rubro" data-rubro="barberias" aria-pressed="false">Barberías</button><button class="rubro" data-rubro="veterinarias" aria-pressed="false">Veterinarias</button><button class="rubro" data-rubro="hogar" aria-pressed="false">Hogar</button></div>
   <div class="grilla" id="catalogo"><a class="tarjeta" data-rubro="salud" href="odontosmart/" style="--c:#0094FB;--c2:#00C2B8">
  <div class="foto"><img src="img/productos/odontosmart-1.webp" alt="Captura de ODONTO SMART" loading="lazy" width="640" height="420"></div>
  <div class="cuerpo"><div class="rubro-t">Consultorios odontológicos</div><h3><img src="img/productos/odontosmart-icono.webp" width="34" height="34" alt="">ODONTO SMART</h3><p>Agenda, odontograma, presupuestos en PDF, cobros y mensajes de WhatsApp en un clic. Todo en un solo programa.</p><ul class="chips"><li>Windows</li><li>Tablet</li><li>Sin internet</li><li>7 días gratis</li></ul><span class="ver">Ver planes y detalles <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
@@ -92,26 +92,10 @@
 </a><a class="tarjeta" data-rubro="veterinarias" href="vetpaw/" style="--c:#6D4BC8;--c2:#2EC4A0">
  <div class="foto"><img src="img/productos/vetpaw-1.webp" alt="Captura de VETPAW PRO" loading="lazy" width="640" height="420"></div>
  <div class="cuerpo"><div class="rubro-t">Veterinarias</div><h3><img src="img/productos/vetpaw-icono.webp" width="34" height="34" alt="">VETPAW PRO</h3><p>Agenda, fichas de pacientes, historia clínica, vacunas, inventario, ventas y recordatorios por WhatsApp. Todo en un solo programa.</p><ul class="chips"><li>Windows</li><li>Sin internet</li><li>3 días gratis</li></ul><span class="ver">Ver planes y detalles <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</a><a class="tarjeta" data-rubro="hogar" href="app-familia-sana/" style="--c:#3E8E7E;--c2:#8CC0A4" data-goatcounter-click="home/familia-sana-tarjeta" data-goatcounter-title="Home: tarjeta Familia Sana">
+ <div class="foto foto-cel"><img src="img/familia-sana-inicio.webp" alt="Pantalla de inicio de Familia Sana con una familia de ejemplo" loading="lazy" width="520" height="1125"></div>
+ <div class="cuerpo"><div class="rubro-t">Para tu casa · Salud familiar</div><h3><img src="familia-sana/icono-192.png" width="34" height="34" alt="">Familia Sana</h3><p>Vacunas, remedios, turnos y estudios de cada integrante de tu familia, incluidas tus mascotas, con recordatorios.</p><ul class="chips"><li>Celular</li><li>Computadora</li><li>Para toda la familia</li></ul><span class="ver">Ver cómo funciona <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
 </a><div class="tarjeta medida"><span class="franja"></span><h3>¿Tu rubro no está?</h3><p>Creamos herramientas a medida para negocios, profesionales e instituciones. Contanos qué te quita tiempo y lo resolvemos juntos.</p><a class="btn btn-wa" href="https://wa.me/595994638426?text=Hola%2C%20necesito%20una%20herramienta%20para%20mi%20rubro.%20Les%20cuento%3A" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1c-1.2-.5-2.3-1.6-2.9-2.9l1-1-1-2L9 8.5z"/></svg><span>Contanos tu idea</span></a></div></div>
- </div>
-</section>
-
-<section class="seccion fs" id="familia-sana" aria-labelledby="fs-titulo">
- <div class="envoltura">
-  <article class="fs-tarjeta">
-   <div class="fs-foto"><img src="img/familia-sana-inicio.webp" width="520" height="1125" loading="lazy" alt="Pantalla de inicio de Familia Sana con una familia de ejemplo"></div>
-   <div class="fs-cuerpo">
-    <div class="fs-etiqueta"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>Para tu casa · Salud familiar</div>
-    <h2 id="fs-titulo">Familia Sana</h2>
-    <p class="fs-lema">Tu familia, su salud, todo en un solo lugar.</p>
-    <p>Una app para tu hogar: vacunas, remedios, turnos y estudios de cada integrante, incluidas tus mascotas, con recordatorios. Se instala en el celular o la computadora.</p>
-    <div class="fs-acc">
-     <a class="fs-btn" href="familia-sana/" data-goatcounter-click="home/familia-sana-abrir" data-goatcounter-title="Home: descargar Familia Sana">Descargá aquí</a>
-     <a class="fs-btn2" href="https://wa.me/595994638426?text=Hola%2C%20quiero%20pedir%20mi%20c%C3%B3digo%20de%20activaci%C3%B3n%20de%20Familia%20Sana." target="_blank" rel="noopener" data-goatcounter-click="home/familia-sana-wa" data-goatcounter-title="Home: pedir código Familia Sana">Pedí tu código de activación</a>
-    </div>
-    <a class="fs-enlace" href="app-familia-sana/" data-goatcounter-click="home/familia-sana-info" data-goatcounter-title="Home: conocer Familia Sana">Conocé cómo funciona ›</a>
-   </div>
-  </article>
  </div>
 </section>
 
@@ -237,7 +221,7 @@
     <p><a href="https://wa.me/595994638426?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Mix%20Shop%20Digital." target="_blank" rel="noopener">WhatsApp 0994 638 426</a></p>
     <p class="redes"><a href="https://www.instagram.com/mixshop_digital/" target="_blank" rel="noopener me" class="ig" aria-label="Instagram de Mix Shop Digital">Instagram</a><a href="https://www.tiktok.com/@mix.shop.digital" target="_blank" rel="noopener me" class="tt" aria-label="TikTok de Mix Shop Digital">TikTok</a><a href="https://www.youtube.com/@MixShopDigitalPy" target="_blank" rel="noopener me" class="yt" aria-label="YouTube de Mix Shop Digital">YouTube</a><a href="https://www.facebook.com/profile.php?id=61595756501799" target="_blank" rel="noopener me" class="fb" aria-label="Facebook de Mix Shop Digital">Facebook</a><a href="https://www.pinterest.com/mixshopdigital/" target="_blank" rel="noopener me" class="pi" aria-label="Pinterest de Mix Shop Digital">Pinterest</a></p>
    </div>
-   <div><h4>Soluciones</h4><ul><li><a href="odontosmart/">ODONTO SMART</a></li><li><a href="contadorpy/">ContadorPy Pro</a></li><li><a href="aulasmart/">AULA SMART</a></li><li><a href="docentesmart/">DOCENTE SMART PY</a></li><li><a href="tesispro/">TESIS PRO PY</a></li><li><a href="minegocio/">Mi Negocio PY</a></li><li><a href="barbersmart/">BARBER SMART PY</a></li><li><a href="vetpaw/">VETPAW PRO</a></li></ul></div>
+   <div><h4>Soluciones</h4><ul><li><a href="odontosmart/">ODONTO SMART</a></li><li><a href="contadorpy/">ContadorPy Pro</a></li><li><a href="aulasmart/">AULA SMART</a></li><li><a href="docentesmart/">DOCENTE SMART PY</a></li><li><a href="tesispro/">TESIS PRO PY</a></li><li><a href="minegocio/">Mi Negocio PY</a></li><li><a href="barbersmart/">BARBER SMART PY</a></li><li><a href="vetpaw/">VETPAW PRO</a></li><li><a href="app-familia-sana/">Familia Sana</a></li></ul></div>
    <div><h4>Ayuda</h4><ul>
     <li><a href="instalacion/">Instalación a distancia</a></li>
     <li><a href="#como-trabajamos">Cómo trabajamos</a></li>
@@ -254,6 +238,6 @@
  </div>
 </footer>
 <a class="wa-flotante" href="https://wa.me/595994638426?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20las%20soluciones%20de%20Mix%20Shop%20Digital." target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1c-1.2-.5-2.3-1.6-2.9-2.9l1-1-1-2L9 8.5z"/></svg><span>¿Consultas?</span></a>
-<script src="js/sitio.js?v=20261110" defer></script>
+<script src="js/sitio.js?v=20261110b" defer></script>
 </body>
 </html>
