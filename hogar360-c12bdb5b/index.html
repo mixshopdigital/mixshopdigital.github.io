@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>HomeFlow 360</title>
+<meta http-equiv="Content-Security-Policy" content="connect-src 'none'; img-src 'self' data: blob:; font-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="description" content="HomeFlow 360 — Your Home, Your Rhythm.">
+<meta name="theme-color" content="#4a7557">
+<meta name="color-scheme" content="light dark">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="HomeFlow 360">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip" href="#view" id="skip-link">Skip</a>
+<div id="boot" class="boot" aria-hidden="true"><div class="boot-dot"></div></div>
+<div id="app" hidden>
+  <aside id="side" aria-label="Main"></aside>
+  <div id="main">
+    <header id="top"></header>
+    <main id="view" tabindex="-1"></main>
+  </div>
+  <nav id="bottom" aria-label="Main"></nav>
+</div>
+<div id="onboard-root"></div>
+<div id="modal-root"></div>
+<div id="toast-root" role="status" aria-live="polite"></div>
+<noscript><p style="padding:24px;font-family:sans-serif">HomeFlow 360 needs JavaScript. / HomeFlow 360 necesita JavaScript.</p></noscript>
+<script src="js/i18n.js"></script>
+<script src="js/core.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/data.js"></script>
+<script src="js/v-tasks.js"></script>
+<script src="js/v-calendar.js"></script>
+<script src="js/v-meals.js"></script>
+<script src="js/v-shopping.js"></script>
+<script src="js/v-money.js"></script>
+<script src="js/v-inventory.js"></script>
+<script src="js/v-maintenance.js"></script>
+<script src="js/v-family.js"></script>
+<script src="js/v-docs.js"></script>
+<script src="js/v-templates.js"></script>
+<script src="js/v-home.js"></script>
+<script src="js/v-settings.js"></script>
+<script src="js/app.js"></script>
+<script>
+window.addEventListener('load',function(){setTimeout(function(){
+  if(window.HF&&HF.state)return;
+  var l=(navigator.language||'es').toLowerCase().slice(0,2),m={es:['Abre HomeFlow 360 desde su enlace web','Este archivo suelto no puede abrirse desde WhatsApp ni desde la lista de descargas del celular. Abre el enlace de acceso que recibiste con tu compra en Chrome (o Safari en iPhone). En computadora puedes descomprimir el ZIP y abrir index.html.'],pt:['Abra o HomeFlow 360 pelo link da web','Este arquivo solto nao pode ser aberto pelo WhatsApp nem pela lista de downloads do celular. Abra o link de acesso que voce recebeu na compra no Chrome (ou Safari no iPhone). No computador voce pode descompactar o ZIP e abrir index.html.'],en:['Open HomeFlow 360 from its web link','This loose file cannot be opened from WhatsApp or the phone downloads list. Open the access link you received with your purchase in Chrome (or Safari on iPhone). On a computer you can unzip the ZIP and open index.html.']}[l]||null;
+  m=m||{es:0}.es||['Open HomeFlow 360 from its web link','This loose file cannot be opened from a chat app. Open the access link in Chrome or Safari.'];
+  var b=document.getElementById('boot'); if(b)b.remove();
+  var d=document.createElement('div');d.style.cssText='font-family:sans-serif;max-width:480px;margin:40px auto;padding:20px;line-height:1.5';d.innerHTML='<h2>'+m[0]+'</h2><p>'+m[1]+'</p>';document.body.appendChild(d);
+},1500);});
+</script>
+
+</body>
+</html>
