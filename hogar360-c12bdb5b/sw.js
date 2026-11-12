@@ -1,5 +1,5 @@
 /* HomeFlow 360 service worker: cache-first, versioned. Bump VERSION on every release. */
-var VERSION = 'hf360-v1.0.5';
+var VERSION = 'hf360-v1.0.6';
 var FILES = ['./', './index.html', './manifest.webmanifest', './css/styles.css', './icons/icon-192.png', './icons/icon-512.png', './icons/maskable-512.png', './icons/apple-touch-icon.png',
   './js/i18n.js', './js/core.js', './js/ui.js', './js/data.js', './js/v-tasks.js', './js/v-calendar.js', './js/v-meals.js', './js/v-shopping.js', './js/v-money.js', './js/v-inventory.js',
   './js/v-maintenance.js', './js/v-family.js', './js/v-docs.js', './js/v-templates.js', './js/v-home.js', './js/v-settings.js', './js/app.js'];

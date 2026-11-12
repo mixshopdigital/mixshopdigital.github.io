@@ -276,3 +276,4 @@ img{max-width:100%}
 @media print{#side,#bottom,#top,.btn,.icon-btn{display:none!important}}
 
 .inst-btn{display:inline-flex;align-items:center;gap:6px;margin-right:8px;white-space:nowrap}.inst-s{display:none}@media (max-width:560px){.inst-l{display:none}.inst-s{display:inline}}
+@media (max-width:480px){[data-wd-box] .pick-row{gap:4px;flex-wrap:nowrap}[data-wd-box] .pk{flex:1 1 0;min-width:0}[data-wd-box] .pk span{display:grid;width:100%;min-width:0;padding:0 2px;font-size:1rem}}
