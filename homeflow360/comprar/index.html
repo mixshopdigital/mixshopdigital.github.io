@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HomeFlow 360 · Tu casa en orden, tu familia coordinada</title>
+<meta name="description" content="La app que organiza tu casa y a toda tu familia: tareas con turnos, calendario, menú semanal, lista de compras, gastos y vencimientos. Celular y computadora, sin internet. Pago único.">
+<meta property="og:title" content="HomeFlow 360 · Tu casa en orden, tu familia coordinada">
+<meta property="og:description" content="Tareas, calendario, comidas, compras y gastos en una sola app. Pago único, sin mensualidades.">
+<meta property="og:image" content="https://mixshopdigital.com.py/homeflow360/comprar/og.jpg">
+<link rel="icon" href="icono.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--t1:#0f766e;--t2:#14b8a6;--t3:#5eead4;--y:#fde68a;--yd:#f59e0b;--ink:#13302b;--mut:#4b635e;--cream:#fbf8f1;--card:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',system-ui,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.55;font-size:17px}
+img{max-width:100%;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.btn{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(180deg,#fde68a,#fbbf24);color:#5a2b07;font-weight:900;font-size:20px;padding:18px 34px;border-radius:999px;text-decoration:none;box-shadow:0 10px 24px rgba(180,110,0,.35);transition:transform .15s}
+.btn:hover{transform:translateY(-2px) scale(1.02)}
+.btn small{font-weight:700;font-size:14px;opacity:.8}
+.pill{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);color:#fff;padding:6px 14px;border-radius:999px;font-weight:800;font-size:14px;letter-spacing:.5px}
+h2{font-size:clamp(28px,4vw,42px);line-height:1.15;font-weight:900;letter-spacing:-.5px;text-align:center}
+.sub{color:var(--mut);text-align:center;max-width:680px;margin:12px auto 0;font-size:18px}
+section{padding:80px 0}
+/* HERO */
+.hero{background:radial-gradient(1200px 500px at 80% -10%,#5eead4 0,transparent 60%),linear-gradient(150deg,#0b5f58 0%,#0f766e 45%,#14b8a6 100%);color:#fff;padding:28px 0 90px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:70px;background:var(--cream);clip-path:ellipse(70% 100% at 50% 100%)}
+.top{display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:22px}
+.logo img{width:40px;height:40px;border-radius:10px}
+.logo span{color:var(--y)}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center;margin-top:46px}
+.hero h1{font-size:clamp(36px,5.4vw,62px);line-height:1.05;font-weight:900;letter-spacing:-1px;margin:16px 0 18px}
+.hero h1 em{font-style:normal;color:var(--y)}
+.hero p.lead{font-size:20px;opacity:.95;max-width:520px}
+.checks{list-style:none;margin:22px 0 30px;display:grid;gap:8px}
+.checks li{font-weight:700;font-size:17px}
+.checks li:before{content:"✔";display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--y);color:#0f766e;font-size:13px;margin-right:10px}
+.trust{display:flex;flex-wrap:wrap;gap:16px;margin-top:18px;font-size:14px;font-weight:700;opacity:.92}
+.devices{position:relative;min-height:420px}
+.devices .pc{width:100%;filter:drop-shadow(0 30px 40px rgba(0,0,0,.35));animation:float 6s ease-in-out infinite}
+.devices .cel{position:absolute;right:-10px;bottom:-30px;width:34%;filter:drop-shadow(0 25px 35px rgba(0,0,0,.4));animation:float 6s ease-in-out infinite;animation-delay:-3s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+/* PAIN */
+.pain{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
+.pain div{background:#fff;border-radius:20px;padding:24px 20px;box-shadow:0 6px 20px rgba(15,118,110,.08);text-align:center;font-weight:700}
+.pain .e{font-size:40px;display:block;margin-bottom:8px}
+.arrow{text-align:center;font-size:22px;font-weight:900;color:var(--t1);margin-top:36px}
+/* VIDEO */
+.video{background:linear-gradient(180deg,var(--cream),#e6f7f4)}
+.vbox{max-width:860px;margin:36px auto 0;border-radius:24px;overflow:hidden;box-shadow:0 24px 60px rgba(15,118,110,.25);aspect-ratio:16/9;background:#000;border:6px solid #fff}
+.vbox iframe{width:100%;height:100%;border:0}
+/* FEATURES */
+.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+.feat{background:#fff;border-radius:22px;padding:26px;box-shadow:0 6px 22px rgba(15,118,110,.08);transition:transform .2s}
+.feat:hover{transform:translateY(-4px)}
+.feat .ic{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;font-size:28px;background:linear-gradient(135deg,#ccfbf1,#99f6e4);margin-bottom:14px}
+.feat h3{font-size:20px;font-weight:900;margin-bottom:6px}
+.feat p{color:var(--mut);font-size:16px}
+/* SHOW */
+.show{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;margin-top:60px}
+.show.rev .txt{order:2}
+.show h3{font-size:30px;font-weight:900;line-height:1.15;margin-bottom:12px}
+.show p{color:var(--mut);font-size:18px}
+.show ul{margin-top:14px;list-style:none;display:grid;gap:8px;font-weight:700}
+.show ul li:before{content:"→ ";color:var(--t2);font-weight:900}
+.phones{display:flex;gap:18px;justify-content:center}
+.phone{background:#111;padding:8px;border-radius:30px;box-shadow:0 20px 40px rgba(0,0,0,.25);width:46%}
+.phone img{border-radius:23px}
+.phone:nth-child(2){transform:translateY(30px)}
+.shot{border-radius:18px;box-shadow:0 20px 50px rgba(0,0,0,.18);border:8px solid #1f2937}
+/* FOR WHO */
+.who{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+.who div{background:linear-gradient(160deg,#0f766e,#14b8a6);color:#fff;border-radius:20px;padding:24px;font-weight:800;text-align:center}
+.who .e{font-size:38px;display:block;margin-bottom:8px}
+/* STEPS */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px;counter-reset:s}
+.step{background:#fff;border-radius:22px;padding:28px;text-align:center;box-shadow:0 6px 22px rgba(15,118,110,.08);position:relative}
+.step:before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--y);color:#7c2d12;font-weight:900;font-size:22px;margin:0 auto 12px}
+.step h3{font-weight:900;margin-bottom:6px}
+.step p{color:var(--mut);font-size:16px}
+/* OFFER */
+.offer{background:radial-gradient(900px 400px at 10% 0,#5eead4 0,transparent 60%),linear-gradient(150deg,#0b5f58,#0f766e 50%,#14b8a6);color:#fff}
+.ocard{max-width:620px;margin:36px auto 0;background:#fff;color:var(--ink);border-radius:28px;padding:38px 34px;text-align:center;box-shadow:0 30px 70px rgba(0,0,0,.3);position:relative}
+.ocard .tag{position:absolute;top:-16px;left:50%;transform:translateX(-50%);background:var(--y);color:#7c2d12;font-weight:900;padding:8px 20px;border-radius:999px;font-size:14px;letter-spacing:1px;white-space:nowrap}
+.ocard h3{font-size:26px;font-weight:900}
+.olist{list-style:none;text-align:left;display:grid;gap:10px;margin:22px auto 26px;max-width:420px;font-weight:700}
+.olist li:before{content:"✔";color:var(--t2);font-weight:900;margin-right:10px}
+.price{font-size:64px;font-weight:900;color:var(--t1);line-height:1}
+.price small{font-size:22px;color:var(--mut);font-weight:800}
+.pnote{color:var(--mut);font-size:14px;margin:8px 0 22px}
+.secure{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:20px;font-size:14px;color:var(--mut);font-weight:700}
+/* FAQ */
+.faq{max-width:780px;margin:36px auto 0;display:grid;gap:12px}
+details{background:#fff;border-radius:18px;padding:18px 22px;box-shadow:0 4px 16px rgba(15,118,110,.07)}
+summary{font-weight:900;font-size:18px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:10px}
+summary:after{content:"+";color:var(--t2);font-size:24px;line-height:1}
+details[open] summary:after{content:"–"}
+details p{color:var(--mut);margin-top:10px}
+footer{background:#0b3d38;color:#cde9e4;text-align:center;padding:34px 20px;font-size:14px}
+footer a{color:var(--y)}
+.sticky{position:fixed;left:0;right:0;bottom:0;background:rgba(11,61,56,.96);padding:10px 16px;display:none;justify-content:center;z-index:50}
+.sticky .btn{font-size:17px;padding:13px 26px}
+.reveal{opacity:0;transform:translateY(24px);transition:all .7s ease}
+.reveal.on{opacity:1;transform:none}
+@media(max-width:900px){
+ .hero-grid,.show{grid-template-columns:1fr}
+ .show.rev .txt{order:0}
+ .devices{min-height:auto;margin-top:10px}
+ .pain,.who{grid-template-columns:1fr 1fr}
+ .feats,.steps{grid-template-columns:1fr}
+ section{padding:60px 0}
+ .sticky{display:flex}
+ body{padding-bottom:70px}
+ .hero{text-align:left}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+ <div class="wrap">
+  <div class="top"><div class="logo"><img src="icono.png" alt="">HomeFlow <span>360</span></div><span class="pill">Pago único</span></div>
+  <div class="hero-grid">
+   <div>
+    <span class="pill">🏡 Para toda la familia</span>
+    <h1>Tu casa en orden.<br><em>Tu familia coordinada.</em></h1>
+    <p class="lead">Tareas, calendario, comidas, compras y gastos en <b>una sola app</b>. Chau papelitos en la heladera y mil grupos de WhatsApp.</p>
+    <ul class="checks">
+     <li>Cada uno sabe qué le toca hoy (los turnos rotan solos)</li>
+     <li>La lista de compras se arma con el menú de la semana</li>
+     <li>Te avisa antes de que venza una cuenta</li>
+    </ul>
+    <a class="btn" href="https://pay.hotmart.com/S108482484B" data-checkout>Quiero HomeFlow 360 →</a>
+    <div class="trust"><span>📱 Celular y computadora</span><span>📶 Funciona sin internet</span><span>🔒 Compra segura por Hotmart</span></div>
+   </div>
+   <div class="devices">
+    <img class="pc" src="mockup-pc.webp" alt="HomeFlow 360 en la computadora">
+    <img class="cel" src="mockup-cel.webp" alt="HomeFlow 360 en el celular">
+   </div>
+  </div>
+ </div>
+</header>
+
+<section>
+ <div class="wrap">
+  <h2 class="reveal">¿Te suena familiar?</h2>
+  <div class="pain">
+   <div class="reveal"><span class="e">📝</span>Papelitos pegados en la heladera</div>
+   <div class="reveal"><span class="e">💬</span>Mil mensajes para coordinar quién hace qué</div>
+   <div class="reveal"><span class="e">😩</span>"¿Quién saca la basura hoy?" todos los días</div>
+   <div class="reveal"><span class="e">💸</span>La factura de la luz vencida… otra vez</div>
+  </div>
+  <p class="arrow reveal">HomeFlow 360 junta todo en un solo lugar 👇</p>
+ </div>
+</section>
+
+<section class="video">
+ <div class="wrap">
+  <h2 class="reveal">Mirá cómo funciona</h2>
+  <p class="sub reveal">En pocos minutos vas a ver todo lo que podés organizar.</p>
+  <div class="vbox reveal"><iframe src="https://www.youtube-nocookie.com/embed/gk5FFpTd4BM?rel=0" title="HomeFlow 360 tutorial" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <h2 class="reveal">Todo lo de tu casa, en una sola app</h2>
+  <p class="sub reveal">Pensada para el día a día de una familia real.</p>
+  <div class="feats">
+   <div class="feat reveal"><div class="ic">✅</div><h3>Tareas y rutinas</h3><p>Con responsable, días de la semana y turnos rotativos automáticos.</p></div>
+   <div class="feat reveal"><div class="ic">📅</div><h3>Calendario familiar</h3><p>Cumpleaños, turnos médicos, reuniones y vencimientos que se repiten solos.</p></div>
+   <div class="feat reveal"><div class="ic">🍽️</div><h3>Comidas y recetas</h3><p>Planificá el menú y mandá los ingredientes a la lista con un toque.</p></div>
+   <div class="feat reveal"><div class="ic">🛒</div><h3>Lista de compras</h3><p>Se ordena por sección del súper. Guardá tus listas frecuentes.</p></div>
+   <div class="feat reveal"><div class="ic">💰</div><h3>Economía del hogar</h3><p>Ingresos, gastos y presupuesto por categoría, en cualquier moneda.</p></div>
+   <div class="feat reveal"><div class="ic">🔔</div><h3>Documentos y vencimientos</h3><p>Servicios, seguros y suscripciones con recordatorio.</p></div>
+   <div class="feat reveal"><div class="ic">📦</div><h3>Inventario</h3><p>Lo que tenés en casa, con foto, valor y fin de garantía.</p></div>
+   <div class="feat reveal"><div class="ic">🔧</div><h3>Mantenimiento</h3><p>Filtros, fumigación, el auto: te avisa cuándo toca.</p></div>
+   <div class="feat reveal"><div class="ic">🏆</div><h3>Familia y logros</h3><p>Puntos y logros por ayudar en casa. ¡Los chicos se enganchan!</p></div>
+  </div>
+
+  <div class="show">
+   <div class="txt reveal">
+    <h3>Tu día de un vistazo, desde el celular</h3>
+    <p>Abrís la app y ves qué hay que hacer hoy, quién lo hace y qué eventos se vienen.</p>
+    <ul><li>Resumen del día y racha de tareas</li><li>Próximos eventos y vencimientos</li><li>Progreso semanal de la familia</li></ul>
+   </div>
+   <div class="phones reveal">
+    <div class="phone"><img src="cel-inicio.webp" alt="Inicio en el celular"></div>
+    <div class="phone"><img src="cel-tareas.webp" alt="Tareas en el celular"></div>
+   </div>
+  </div>
+
+  <div class="show rev">
+   <div class="txt reveal">
+    <h3>Y en la computadora, con pantalla grande</h3>
+    <p>La misma app se adapta a tu compu para cargar todo más cómodo. Se instala desde el navegador, sin descargar programas.</p>
+    <ul><li>Windows, Mac, Android e iPhone</li><li>Sin cuentas ni contraseñas</li><li>Tus datos quedan en tu aparato</li></ul>
+   </div>
+   <img class="shot reveal" src="pc-inicio.webp" alt="HomeFlow 360 en la computadora">
+  </div>
+ </div>
+</section>
+
+<section style="background:#e6f7f4">
+ <div class="wrap">
+  <h2 class="reveal">¿Para quién es HomeFlow 360?</h2>
+  <div class="who">
+   <div class="reveal"><span class="e">👨‍👩‍👧‍👦</span>Familias con chicos</div>
+   <div class="reveal"><span class="e">💑</span>Parejas que comparten la casa</div>
+   <div class="reveal"><span class="e">🙋‍♀️</span>Mamás y papás que organizan todo</div>
+   <div class="reveal"><span class="e">🏠</span>Personas que viven solas</div>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <h2 class="reveal">Empezás en 3 pasos</h2>
+  <div class="steps">
+   <div class="step reveal"><h3>Comprás una sola vez</h3><p>Pago seguro por Hotmart, con tarjeta u otros medios de tu país.</p></div>
+   <div class="step reveal"><h3>Recibís tu acceso</h3><p>Te llega al instante la guía con el enlace de la app y los pasos.</p></div>
+   <div class="step reveal"><h3>La instalás y listo</h3><p>Tocás "Instalar como aplicación" y ya funciona, incluso sin internet.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="offer" id="oferta">
+ <div class="wrap">
+  <h2 class="reveal">Organizá tu casa desde hoy</h2>
+  <p class="sub reveal" style="color:#d9f5f0">Sin mensualidades. Pagás una vez y es tuya.</p>
+  <div class="ocard reveal">
+   <span class="tag">PAGO ÚNICO</span>
+   <h3>HomeFlow 360 · Acceso completo</h3>
+   <ul class="olist">
+    <li>Todas las secciones de la app</li>
+    <li>Computadora y celular</li>
+    <li>Funciona sin internet</li>
+    <li>Español, inglés y portugués</li>
+    <li>Guía de instalación paso a paso</li>
+    <li>Soporte por WhatsApp</li>
+   </ul>
+   <div class="price"><small>US$</small> 17</div>
+   <p class="pnote">Se muestra en tu moneda local al pagar</p>
+   <a class="btn" href="https://pay.hotmart.com/S108482484B" data-checkout>Comprar ahora →</a>
+   <div class="secure"><span>🔒 Pago 100% seguro por Hotmart</span><span>↩️ 7 días para pedir reembolso</span></div>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <h2 class="reveal">Preguntas frecuentes</h2>
+  <div class="faq">
+   <details class="reveal"><summary>¿Tiene mensualidad?</summary><p>No. Pagás una sola vez y la usás para siempre, sin renovaciones.</p></details>
+   <details class="reveal"><summary>¿Cómo la recibo?</summary><p>Apenas se confirma tu pago, Hotmart te da acceso a una guía en PDF con el enlace de la app y los pasos para instalarla.</p></details>
+   <details class="reveal"><summary>¿Necesito internet?</summary><p>Solo la primera vez, para abrirla e instalarla. Después funciona sin conexión.</p></details>
+   <details class="reveal"><summary>¿Funciona en iPhone?</summary><p>Sí. Se abre con Safari y se agrega a la pantalla de inicio. En Android y computadora se instala con Chrome o Edge.</p></details>
+   <details class="reveal"><summary>¿Dónde quedan mis datos?</summary><p>En tu propio aparato. No hay cuentas ni contraseñas y nada se envía a internet. Podés descargar un archivo de respaldo cuando quieras.</p></details>
+   <details class="reveal"><summary>¿Puedo usarla en el celular y en la computadora?</summary><p>Sí, la instalás en los dos. Para pasar tus datos de un aparato a otro usás la opción de exportar e importar el respaldo.</p></details>
+   <details class="reveal"><summary>¿Y si no me convence?</summary><p>Tenés 7 días para pedir el reembolso directamente en Hotmart.</p></details>
+   <details class="reveal"><summary>¿Hay soporte?</summary><p>Sí, te ayudamos por WhatsApp con la instalación o cualquier duda.</p></details>
+  </div>
+  <div style="text-align:center;margin-top:40px"><a class="btn" href="https://pay.hotmart.com/S108482484B" data-checkout>Quiero organizar mi casa →</a></div>
+ </div>
+</section>
+
+<footer>
+ HomeFlow 360 es un producto de <b>Mix Shop Digital</b> · <a href="https://mixshopdigital.com.py">mixshopdigital.com.py</a><br>
+ Pago procesado de forma segura por Hotmart.
+</footer>
+
+<div class="sticky"><a class="btn" href="https://pay.hotmart.com/S108482484B" data-checkout>Comprar HomeFlow 360 · US$ 17</a></div>
+
+<script>
+// Pasa los parámetros de afiliado/campaña (src, sck, utm, etc.) al link de pago
+(function(){var q=location.search;if(!q)return;document.querySelectorAll('[data-checkout]').forEach(function(a){a.href=a.href+(a.href.indexOf('?')>-1?'&':'?')+q.slice(1)})})();
+// Animación al aparecer
+(function(){var els=document.querySelectorAll('.reveal');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('on')});return}var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)})})();
+</script>
+</body>
+</html>
