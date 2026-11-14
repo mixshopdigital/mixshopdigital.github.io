@@ -1,0 +1,43 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Manual - Granja El Soñador</title>
+<style>body{font:17px/1.55 system-ui,sans-serif;max-width:760px;margin:0 auto;padding:18px;color:#1f2a14}h1{color:#0f4722}h2{color:#0f4722;border-bottom:2px solid #d8dfc6;padding-bottom:4px;margin-top:32px}code{background:#eef2e2;padding:1px 6px;border-radius:5px}li{margin:4px 0}.aviso{background:#fff4d6;border-left:5px solid #d99a00;padding:8px 12px;border-radius:6px}table{border-collapse:collapse;width:100%}td,th{border:1px solid #cdd5b8;padding:6px 8px;text-align:left}</style></head><body>
+<h1>🌾 Granja El Soñador — Manual</h1>
+<p>Aplicación de gestión de la granja para el celular. Funciona <strong>sin Internet</strong>, sin suscripciones, sin anuncios y sin cuentas. Todo se guarda en el propio celular.</p>
+
+<h2>1. Instalar en el celular (María)</h2>
+<ol><li>Abre <strong>Chrome</strong> en el celular (Android).</li><li>Escribe la dirección: <code>https://mixshopdigital.com.py/granja-sonador-7k2q/</code></li><li>Toca el menú <strong>⋮</strong> (arriba a la derecha) → <strong>Instalar aplicación</strong> (o “Agregar a la pantalla principal”).</li><li>Aparece el ícono de la granja en el celular. Ábrelo desde ahí.</li></ol>
+<p class="aviso"><strong>Importante:</strong> no abras el archivo descargado desde “Descargas”: así Chrome no ofrece instalar. Siempre usa la dirección de arriba, al menos la primera vez. Después la app abre sin Internet.</p>
+<h2>2. Instalar en el celular del esposo</h2>
+<ol><li>Envíale la dirección por WhatsApp.</li><li>Que la abra en Chrome y repita los pasos de arriba. Escribirá su nombre y quedará con su saludo.</li><li>Para pasarle los datos que ya cargaste: en tu celular, <strong>Más → Configuración → Descargar respaldo</strong>; envíale el archivo; en el suyo, <strong>Restaurar desde un archivo</strong>.</li></ol>
+<p class="aviso"><strong>Sin sincronización automática:</strong> cada celular tiene sus propios datos. Si los dos cargan información, hay que pasar respaldos de uno al otro (restaurar reemplaza lo que hay). Lo más ordenado es que uno solo cargue los datos y el otro los consulte.</p>
+<h2>3. Uso por módulo</h2>
+<ul>
+<li><strong>Inicio:</strong> saludo según la hora, resumen y avisos importantes.</li>
+<li><strong>Animales:</strong> cerdos, vacas, cabras y caballos se registran uno por uno (código automático CER-001…, fotos, peso, historial). Gallinas y patos se manejan por lote (cantidad, nacimientos, ventas, bajas).</li>
+<li><strong>Calendario → Reproducción:</strong> registra celo y monta; la app calcula el parto probable (cerdo 114 días, vaca 283, cabra 150, caballo 340; editable en Configuración → Especies). La gestación solo se marca “confirmada” cuando tú lo decides. Al registrar el parto se crean las crías, ligadas a la madre. También estima el próximo celo.</li>
+<li><strong>Calendario → Aves:</strong> huevos del día e incubaciones (gallina 21 días, pato 28, pato criollo 35; editable) con eclosión estimada.</li>
+<li><strong>Salud:</strong> vacunas y tratamientos. La app <em>no recomienda medicamentos ni dosis</em>; solo anota lo indicado por el veterinario.</li>
+<li><strong>Alimentación:</strong> balanceados, compras (crean el gasto), consumo diario, días que alcanza, fecha de agotamiento y de reposición, y estados Suficiente / Por agotarse / Stock bajo / Agotado.</li>
+<li><strong>Pedidos:</strong> queso Paraguay (kg), leche (litros), huevos (unidad, docena, maple). El precio se escribe en cada pedido. La <em>entrega</em> y el <em>cobro</em> son independientes y admiten cobros parciales. Cada cobro genera su ingreso. Productos y precios de referencia: Más → Productos a la venta.</li>
+<li><strong>Economía:</strong> resumen del mes, gastos, ingresos y <strong>Sueldo del Capataz</strong> (monto del mes, adelanto, pagado, pendiente; cada pago crea el gasto automáticamente).</li>
+<li><strong>Notas:</strong> bloc con búsqueda y notas fijadas.</li>
+<li><strong>Informes:</strong> PDF (con el logo) y CSV (Excel) de gastos, ingresos, pedidos, animales y alimentación.</li>
+<li><strong>Avisos 🔔:</strong> lista de lo pendiente (partos, vacunas, controles, stock, entregas, cobros). En Configuración puedes activar un aviso del celular una vez al día <em>al abrir la app</em>.</li>
+<li><strong>PIN:</strong> opcional, en Configuración.</li></ul>
+<h2>4. Copias de seguridad (muy importante)</h2>
+<p>Los datos viven solo en el celular. Si se pierde, se rompe o se borran los datos del navegador, se pierden. Cada semana: <strong>Más → Configuración → Descargar respaldo</strong> y guarda el archivo en Google Drive o envíalo por WhatsApp. Para recuperar: <strong>Restaurar desde un archivo</strong> (la app comprueba que el archivo esté íntegro y pide confirmación).</p>
+<h2>5. Publicación (para quien mantiene el sitio)</h2>
+<p>La app está publicada como carpeta oculta (<code>granja-sonador-7k2q</code>) en el repositorio del sitio, sin enlaces desde la página y con <code>noindex</code>, para que no aparezca en Google. Para actualizar: construir (<code>npm install</code>, <code>npm run build</code>) y copiar el contenido de <code>dist/</code> a esa carpeta. Los celulares toman la versión nueva al abrir la app con Internet.</p>
+<h2>6. Tecnologías y costos</h2>
+<table><tr><th>Pieza</th><th>Qué es</th><th>Costo</th></tr>
+<tr><td>React + TypeScript + Vite</td><td>Construcción de la app</td><td>Gratis</td></tr><tr><td>PWA (Service Worker)</td><td>Instalable y sin conexión</td><td>Gratis</td></tr><tr><td>IndexedDB (Dexie)</td><td>Base de datos en el celular</td><td>Gratis</td></tr><tr><td>jsPDF</td><td>Informes PDF</td><td>Gratis</td></tr><tr><td>GitHub Pages / tu dominio</td><td>Alojamiento</td><td>Ya lo tienes; sin costo adicional</td></tr></table>
+<p>No hay servidores, suscripciones, anuncios ni rastreadores.</p>
+<h2>7. Qué está hecho y qué falta</h2>
+<p><strong>Hecho y probado:</strong> todos los módulos descritos arriba, instalación, uso sin conexión, respaldo/restauración con verificación de integridad, PIN, informes PDF/CSV.</p>
+<p><strong>Limitaciones honestas:</strong></p><ul>
+<li>No hay sincronización automática entre celulares (solo respaldo manual).</li>
+<li>Los avisos del celular funcionan únicamente cuando la app se abre; con la app cerrada no llegan (haría falta un servidor).</li>
+<li>No hay fotos de comprobantes en gastos ni fotos en notas todavía.</li>
+<li>No se entrega APK: la instalación es como aplicación web desde Chrome (se ve y se comporta igual). Si algún día se necesita una APK, se puede generar con PWABuilder.</li>
+<li>El informe PDF es de tabla simple (sin gráficos); los gráficos están en la pantalla Economía.</li>
+<li>Las pruebas se hicieron en un Chrome simulado con tamaño de celular; conviene que María confirme en el Samsung Galaxy S23 FE.</li></ul>
+</body></html>
